@@ -1,15 +1,18 @@
 .hero {
-  margin: 130px 0 140px;
+  margin: 0;
+  padding: 130px 0 140px;
   position: relative;
+  overflow: hidden;
   @include sm {
     margin: 40px 0;
   }
   .hero-svg {
     position: absolute;
-    left: 0;
     bottom: -15px;
-    width: 100%;
     z-index: -1;
+    left: auto;
+    inset-inline-end: -166px;
+    width: auto;
     @include md {
       display: none;
     }
@@ -111,10 +114,14 @@
   }
   .hero-img {
     border-radius: 50%;
-    overflow: hidden;
+    overflow: unset;
     max-width: 501px;
     aspect-ratio: 1;
     position: relative;
+    .img-cover {
+      overflow: hidden;
+      border-radius: 50%;
+    }
     &::after {
       content: "";
       position: absolute;

@@ -344,8 +344,10 @@ iframe {
 }
 
 .hero {
-  margin: 130px 0 140px;
+  margin: 0;
+  padding: 130px 0 140px;
   position: relative;
+  overflow: hidden;
 }
 @media (max-width: 991px) {
   .hero {
@@ -354,10 +356,11 @@ iframe {
 }
 .hero .hero-svg {
   position: absolute;
-  left: 0;
   bottom: -15px;
-  width: 100%;
   z-index: -1;
+  left: auto;
+  inset-inline-end: -166px;
+  width: auto;
 }
 @media (max-width: 1199px) {
   .hero .hero-svg {
@@ -473,10 +476,14 @@ iframe {
 }
 .hero-cont .hero-img {
   border-radius: 50%;
-  overflow: hidden;
+  overflow: unset;
   max-width: 501px;
   aspect-ratio: 1;
   position: relative;
+}
+.hero-cont .hero-img .img-cover {
+  overflow: hidden;
+  border-radius: 50%;
 }
 .hero-cont .hero-img::after {
   content: "";
