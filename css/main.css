@@ -351,7 +351,7 @@ iframe {
 }
 @media (max-width: 991px) {
   .hero {
-    margin: 40px 0;
+    padding: 40px 0;
   }
 }
 .hero .hero-svg {
@@ -359,7 +359,7 @@ iframe {
   bottom: -15px;
   z-index: -1;
   left: auto;
-  inset-inline-end: -166px;
+  inset-inline-end: -165px;
   width: auto;
 }
 @media (max-width: 1199px) {
