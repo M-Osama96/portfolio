@@ -1,0 +1,113 @@
+.main-header {
+  background-color: #343434;
+  color: #fff;
+}
+.header {
+  // padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 82px;
+  @include sm {
+    justify-content: flex-start;
+  }
+  .menu-btn {
+    display: none;
+    @include sm {
+      display: flex;
+      margin-inline-end: 10px;
+      z-index: 113;
+      font-size: 28px;
+      color: #fff;
+      transition: all 0.5s ease-in-out;
+      .active & {
+        color: #fff;
+        i {
+          &::before {
+            content: "\f00d";
+          }
+        }
+      }
+    }
+  }
+
+  .logo {
+    display: flex;
+    height: 36px;
+    z-index: 111;
+    @include xs {
+      height: 30px;
+    }
+  }
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    inset-inline-start: -100vw;
+    width: 100vw;
+    background-color: $setting_text_color;
+    opacity: 98%;
+    z-index: 101;
+    transition: all 0.5s ease-in-out;
+    @include sm {
+      display: flex;
+    }
+    .active & {
+      inset-inline-start: 0;
+    }
+  }
+  .main-nav {
+    @include sm {
+      position: fixed;
+      top: 0;
+      height: 100vh;
+      width: 100vw;
+      z-index: 102;
+      inset-inline-start: 0;
+      inset-inline-start: -100vw;
+      padding: 120px 0 40px;
+      transition: all 0.5s ease-in-out;
+      .active & {
+        inset-inline-start: 0;
+      }
+    }
+    .nav-list {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      @include sm {
+        flex-direction: column;
+        li {
+          color: #fff;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  .lang-cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    z-index: 96;
+    @include sm {
+      position: relative;
+      margin-inline-start: auto;
+      z-index: 116;
+    }
+
+    .lang-link {
+      text-decoration: underline;
+      line-height: 24px;
+      .active & {
+        color: #fff;
+      }
+    }
+    .lang {
+      font-size: 20px;
+    }
+  }
+}

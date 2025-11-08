@@ -1,0 +1,15 @@
+@import "sass/abstracts/mixins";
+@import "sass/abstracts/variables";
+
+@import "sass/base/reset";
+@import "sass/base/typography";
+@import "sass/base/base";
+
+@import "sass/component/header";
+@import "sass/component/hero";
+@import "sass/component/info";
+@import "sass/component/skills";
+@import "sass/component/projects";
+@import "sass/component/reviews";
+@import "sass/component/clients";
+@import "sass/component/footer";
