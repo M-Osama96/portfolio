@@ -23,6 +23,21 @@
   grid-template-columns: 525px 1fr;
   align-items: center;
   gap: 99px;
+  .about-page & {
+    grid-template-columns: 568px 1fr;
+    gap: 66px;
+    @include md {
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+    @include sm {
+      gap: 30px;
+      grid-template-columns: 1fr;
+    }
+    @include xs {
+      grid-template-columns: 1fr;
+    }
+  }
   @include md {
     grid-template-columns: 1fr 1fr;
   }
@@ -55,8 +70,42 @@
       font-weight: $weight_light;
       margin-bottom: 32px;
       color: #343434;
+      .about-page & {
+        margin-bottom: 12px;
+        font-size: 16px;
+        font-weight: $weight_regular;
+      }
       @include sm {
-        font-size: 18px;
+        font-size: 14px;
+      }
+    }
+    .project-advs {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      margin-bottom: 20px;
+      .advs-line {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        .advs-icon {
+          color: #00fd87;
+          font-size: 16px;
+          @include xs {
+            font-size: 14px;
+          }
+        }
+        .advs-text {
+          color: #343434;
+          font-size: 16px;
+          font-weight: $weight_regular;
+          @include md {
+            font-size: 14px;
+          }
+          @include xs {
+            font-size: 12px;
+          }
+        }
       }
     }
     .hero-btns {
@@ -74,6 +123,10 @@
         padding: 9px 24px;
         transition: all 0.4s ease;
         border: 2px solid #ffffff;
+        .about-page & {
+          width: 100%;
+          justify-content: center;
+        }
         @include sm {
           padding: 8px 12px;
         }
@@ -92,24 +145,6 @@
           font-weight: $weight_semibold;
         }
       }
-      .more-btn {
-        display: flex;
-        align-items: center;
-        border: 2px solid $setting_primary_color;
-        border-radius: 8px;
-        padding: 9px 24px;
-        color: $setting_primary_color;
-        font-size: 16px;
-        font-weight: $weight_semibold;
-        transition: all 0.4s ease;
-        @include sm {
-          padding: 8px 12px;
-        }
-        &:hover {
-          color: #fff;
-          background-color: $setting_primary_color;
-        }
-      }
     }
   }
   .hero-img {
@@ -118,9 +153,15 @@
     max-width: 501px;
     aspect-ratio: 1;
     position: relative;
+    .about-page & {
+      @include sm {
+        margin: auto;
+      }
+    }
     .img-cover {
       overflow: hidden;
       border-radius: 50%;
+      display: flex;
     }
     &::after {
       content: "";

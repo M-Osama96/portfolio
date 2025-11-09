@@ -1,0 +1,50 @@
+.breadcrumb-section {
+  margin: 24px 0 -59px;
+  @include sm {
+    margin: 20px 0 -20px;
+  }
+  .breadcrumb-content {
+    padding: 8px 24px;
+    background-color: #343434;
+    border-radius: 16px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+    width: fit-content;
+    margin: auto;
+    border: 1px solid lighten($color: $setting_text_color, $amount: 30%);
+    @include sm {
+      padding: 10px 25px;
+      border-radius: 8px;
+    }
+    .page-title {
+      font-weight: $weight_bold;
+      font-size: 20px;
+      margin-bottom: 0px;
+      @include sm {
+        font-size: 18px;
+        text-align: center;
+        margin: 0;
+      }
+    }
+    .breadcrumbs-menu {
+      display: flex;
+      gap: 8px;
+      @include sm {
+        display: none;
+      }
+      li {
+        font-size: 16px;
+      }
+      li {
+        span {
+          font-size: 16px;
+          color: lighten($color: $setting_text_color, $amount: 20%);
+        }
+      }
+    }
+  }
+}
