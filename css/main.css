@@ -345,7 +345,7 @@ iframe {
 
 .hero {
   margin: 0;
-  padding: 123px 0 140px;
+  padding: 130px 0 140px;
   position: relative;
   overflow: hidden;
 }
@@ -518,6 +518,26 @@ iframe {
 .hero-cont .hero-text .hero-btns .cv-btn .cv {
   font-size: 16px;
   font-weight: 600;
+}
+.hero-cont .hero-text .hero-btns .more-btn {
+  display: flex;
+  align-items: center;
+  border: 2px solid #d3930a;
+  border-radius: 8px;
+  padding: 9px 24px;
+  color: #d3930a;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.4s ease;
+}
+@media (max-width: 991px) {
+  .hero-cont .hero-text .hero-btns .more-btn {
+    padding: 8px 12px;
+  }
+}
+.hero-cont .hero-text .hero-btns .more-btn:hover {
+  color: #fff;
+  background-color: #d3930a;
 }
 .hero-cont .hero-img {
   border-radius: 50%;

@@ -1,6 +1,6 @@
 .hero {
   margin: 0;
-  padding: 123px 0 140px;
+  padding: 130px 0 140px;
   position: relative;
   overflow: hidden;
   @include sm {
@@ -143,6 +143,24 @@
         .cv {
           font-size: 16px;
           font-weight: $weight_semibold;
+        }
+      }
+      .more-btn {
+        display: flex;
+        align-items: center;
+        border: 2px solid $setting_primary_color;
+        border-radius: 8px;
+        padding: 9px 24px;
+        color: $setting_primary_color;
+        font-size: 16px;
+        font-weight: $weight_semibold;
+        transition: all 0.4s ease;
+        @include sm {
+          padding: 8px 12px;
+        }
+        &:hover {
+          color: #fff;
+          background-color: $setting_primary_color;
         }
       }
     }
