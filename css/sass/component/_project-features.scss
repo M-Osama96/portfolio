@@ -1,0 +1,177 @@
+.project-features {
+  margin: 162px 0 -60px;
+
+  @include sm {
+    margin: 90px 0 60px;
+  }
+  @include xs {
+    margin: 110px 0 60px;
+  }
+}
+.project-features-cont {
+  display: flex;
+  flex-direction: column;
+  gap: 112px;
+  @include sm {
+    gap: 50px;
+  }
+}
+.feature {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #000;
+  border-radius: 24px;
+  overflow: hidden;
+  @include md {
+    grid-template-columns: 1fr 1fr;
+  }
+  @include sm {
+    grid-template-columns: 1fr;
+  }
+  @include xs {
+    border-radius: 12px;
+  }
+}
+.feature-text {
+  color: #fff;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 36px 31px;
+  position: relative;
+  z-index: 1;
+  order: 1;
+  @include xs {
+    gap: 12px;
+    padding: 15px;
+  }
+  .left & {
+    order: 2;
+  }
+  .advs & {
+    padding: 16px 31px;
+    @include xs {
+      padding: 15px;
+    }
+  }
+  .title {
+    font-size: 32px;
+    font-weight: $weight-bold;
+    z-index: 3;
+    @include xs {
+      font-size: 24px;
+    }
+  }
+  .desc {
+    font-size: 16px;
+    font-weight: $weight_regular;
+    color: #d9d9d9;
+    z-index: 3;
+    @include xs {
+      font-size: 12px;
+    }
+  }
+  .project-advs {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    z-index: 3;
+    @include sm {
+      width: 55%;
+    }
+    @include xs {
+      width: 100%;
+    }
+    .advs-line {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      @include sm {
+        gap: 5px;
+      }
+      .advs-icon {
+        color: #00fd87;
+        font-size: 16px;
+        @include sm {
+          font-size: 14px;
+        }
+        @include xs {
+          font-size: 14px;
+        }
+      }
+      .advs-text {
+        color: #d9d9d9;
+        font-size: 16px;
+        font-weight: $weight_regular;
+        @include md {
+          font-size: 14px;
+        }
+        @include sm {
+          font-size: 12px;
+        }
+        @include xs {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+  .number {
+    position: absolute;
+    left: 26px;
+    bottom: 0;
+    font-size: 155px;
+    font-weight: $weight-bold;
+    color: #343434;
+    z-index: 2;
+    @include xs {
+      line-height: 1;
+      font-size: 120px;
+    }
+    .advs & {
+      bottom: 40px;
+      left: 22px;
+      @include sm {
+        bottom: 0;
+      }
+      @include xs {
+        line-height: 1;
+        font-size: 120px;
+      }
+    }
+  }
+}
+.feature-img {
+  aspect-ratio: 559/316;
+  border-radius: 24px;
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid #545454;
+  order: 2;
+  @include md {
+    aspect-ratio: 559/340;
+  }
+  @include sm {
+    aspect-ratio: 559/240;
+  }
+  @include xs {
+    border-radius: 12px;
+    aspect-ratio: 559/316;
+  }
+  .left & {
+    order: 1;
+    @include sm {
+      order: 2;
+    }
+  }
+  .img-cover {
+    display: flex;
+    object-position: center center;
+    .left & {
+      object-position: center 86%;
+    }
+    .advs & {
+      object-position: center 72%;
+    }
+  }
+}
