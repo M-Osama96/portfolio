@@ -247,6 +247,10 @@ footer {
       @include sm {
         flex-wrap: wrap;
       }
+      @include xs {
+        flex-wrap: wrap;
+        width: 100%;
+      }
       .contact-btn {
         display: flex;
         align-items: center;
@@ -256,6 +260,8 @@ footer {
         border-radius: 8px;
         background-color: darken($color: $setting_text_color, $amount: 10%);
         width: 100%;
+        transition: all 0.5s ease-in-out;
+        border: 1px solid transparent;
         @include md {
           padding: 10px;
         }
@@ -266,6 +272,7 @@ footer {
         }
         .las {
           font-size: 20px;
+          transition: all 0.5s ease-in-out;
         }
         .contact-type {
           font-size: 16px;
@@ -273,15 +280,15 @@ footer {
             font-size: 14px;
           }
         }
-      }
-      .active {
-        border: 1px solid $setting_primary_color;
-        white-space: nowrap;
-        @include md {
-          white-space: unset;
-        }
-        .las {
-          color: $setting_primary_color;
+        &:hover {
+          border: 1px solid $setting_primary_color;
+          // white-space: nowrap;
+          @include md {
+            white-space: unset;
+          }
+          .las {
+            color: $setting_primary_color;
+          }
         }
       }
     }

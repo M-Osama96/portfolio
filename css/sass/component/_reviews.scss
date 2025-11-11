@@ -3,6 +3,12 @@
   @include sm {
     margin: 40px 0;
   }
+  .reviews-page & {
+    margin: 123px 0 -90px;
+    @include sm {
+      margin: 50px 0;
+    }
+  }
 }
 .reviews-cont {
   padding: 57px;
@@ -16,6 +22,8 @@
   @include xs {
     padding: 20px;
     border-radius: 18px;
+  }
+  .reviews-page & {
   }
 }
 .reviews-row {
