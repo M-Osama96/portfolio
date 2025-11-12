@@ -60,7 +60,7 @@
     color: #fff;
   }
 }
-#myHeader.active {
+.myHeader.active {
   backdrop-filter: blur(8px);
   background-color: rgba($color: #fff, $alpha: 0.2);
 }
